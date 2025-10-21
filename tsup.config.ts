@@ -2,10 +2,11 @@ import { defineConfig } from 'tsup'
 
 export default defineConfig({
   entry: [
-    'src/index.ts',
-    'src/theme/index.ts',
-    'src/utils/index.ts',
-    'src/hooks/index.ts',
+    'src/_EXPORT/index.ts',
+    'src/_EXPORT/hooks.ts',
+    'src/_EXPORT/site.ts',
+    'src/_EXPORT/theme.ts',
+    'src/_EXPORT/utils.ts',
   ],
   format: ['esm', 'cjs'],
   splitting: true,

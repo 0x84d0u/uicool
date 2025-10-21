@@ -2,14 +2,14 @@
   "name": "@0x84d0u/uicool",
   "version": "0.1.0",
   "description": "A modern React UI library built with Tailwind CSS",
-  "main": "./dist/index.js",
-  "module": "./dist/index.mjs",
-  "types": "./dist/index.d.ts",
+  "main": "./dist/_EXPORT/index.js",
+  "module": "./dist/_EXPORT/index.mjs",
+  "types": "./dist/_EXPORT/index.d.ts",
   "exports": {
     ".": {
-      "types": "./dist/index.d.ts",
-      "import": "./dist/index.mjs",
-      "require": "./dist/index.js"
+      "types": "./dist/_EXPORT/index.d.ts",
+      "import": "./dist/_EXPORT/index.mjs",
+      "require": "./dist/_EXPORT/index.js"
     },
     "./hooks": {
       "types": "./dist/_EXPORT/hooks.d.ts",
