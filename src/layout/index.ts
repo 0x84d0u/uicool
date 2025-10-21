@@ -1,5 +1,0 @@
-export { Box, type BoxProps } from "@extrenal/radix-themes"
-export { Flex, type FlexProps } from "@extrenal/radix-themes"
-export { Grid, type GridProps } from "@extrenal/radix-themes"
-export { Container, type ContainerProps } from "@extrenal/radix-themes"
-export { Section, type SectionProps } from "@extrenal/radix-themes"

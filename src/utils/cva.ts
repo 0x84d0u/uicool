@@ -1,14 +1,8 @@
-import type { VariantProps } from "class-variance-authority";
-import type { ClassValue } from "clsx";
-import { ReactNode } from "react";
+import { VariantProps } from 'class-variance-authority';
+import { ClassValue } from 'clsx';
 import { JSX } from "react/jsx-runtime";
 
-export type { ClassValue as Classname } from "clsx";
-
-export interface PropifyChildren {
-  children?: ReactNode | undefined
-}
-
+export { cva, } from 'class-variance-authority'
 export type PropifyPrimitive<T extends keyof JSX.IntrinsicElements> = React.ComponentPropsWithoutRef<T> & {
     className?: ClassValue
 }

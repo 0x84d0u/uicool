@@ -3,11 +3,7 @@ import { defineConfig } from 'tsup'
 export default defineConfig({
   entry: [
     'src/index.ts',
-    'src/forms/index.ts',
-    'src/layout/index.ts', 
-    'src/typography/index.ts',
   ],
-
   format: ['esm', 'cjs'],
   splitting: true,
   dts: true,
