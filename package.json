@@ -1,0 +1,80 @@
+{
+  "name": "@0x84d0u/uicool",
+  "version": "0.1.0",
+  "description": "A modern React UI library built with Tailwind CSS",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
+    },
+    "./data": {
+      "types": "./dist/data/index.d.ts",
+      "import": "./dist/data/index.mjs",
+      "require": "./dist/data/index.js"
+    },
+    "./forms": {
+      "types": "./dist/forms/index.d.ts",
+      "import": "./dist/forms/index.mjs",
+      "require": "./dist/forms/index.js"
+    },
+    "./layout": {
+      "types": "./dist/layout/index.d.ts",
+      "import": "./dist/layout/index.mjs",
+      "require": "./dist/layout/index.js"
+    },
+    "./typography": {
+      "types": "./dist/typography/index.d.ts",
+      "import": "./dist/typography/index.mjs",
+      "require": "./dist/typography/index.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "dist"
+  ],
+  "sideEffects": [
+    "*.css",
+    "*.scss"
+  ],
+  "scripts": {
+    "dev": "tsup --watch",
+    "build": "rm -rf dist && clear && tsup",
+    "type-check": "tsc --noEmit"
+  },
+  "keywords": [
+    "react",
+    "ui",
+    "components",
+    "tailwind",
+    "tailwindcss",
+    "nextjs"
+  ],
+  "peerDependencies": {
+    "react": "^19",
+    "react-dom": "^19",
+    "tailwindcss": "^4"
+  },
+  "devDependencies": {
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "react": "^19",
+    "react-dom": "^19",
+    "tsup": "^8.2.0",
+    "typescript": "^5.3.3"
+  },
+  "dependencies": {
+    "@radix-ui/themes": "^3.2.1",
+    "@tailwindcss/postcss": "^4.1.15",
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.0",
+    "lucide-react": "^0.546.0",
+    "next-themes": "^0.4.6",
+    "postcss": "^8.5.6",
+    "radix-ui": "^1.4.3",
+    "tailwind-merge": "^2.2.0"
+  }
+}

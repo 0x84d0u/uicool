@@ -1,0 +1,42 @@
+{
+  "compilerOptions": {
+    /* === Core Output Settings === */
+    "target": "ESNext",
+    "module": "ESNext",
+    "lib": ["DOM", "ESNext"],
+    "moduleResolution": "Bundler",
+    "outDir": "dist",
+
+    /* === React + Next.js Compatibility === */
+    "jsx": "react-jsx",
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+
+    /* === Type Safety & Declarations === */
+    "strict": true,
+    "declaration": true,
+    "declarationMap": true,
+    "sourceMap": true,
+
+    /* === Path Aliases === */
+    "baseUrl": ".",
+    "paths": {
+      "@utils": ["src/lib/utils.ts"],
+      "@types": ["src/lib/types.ts"],
+      // "@primitives": ["src/lib/primitives/index.ts"],
+      "@extrenal/*": ["src/lib/external/*"],
+
+      "@ui/forms": ["src/forms/index.ts"],
+      "@ui/layout": ["src/layout/index.ts"],
+      "@ui/typography": ["src/typography/index.ts"],
+    },
+
+    /* === Next.js Optimization === */
+    "isolatedModules": true,
+    "noEmit": true
+  },
+  "include": ["src"],
+  "exclude": ["node_modules", "dist"]
+}
