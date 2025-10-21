@@ -1,6 +1,6 @@
-// src/components/site/SiteLayout.tsx
 import { ReactNode } from "react";
 import { cn, ClassName } from "@utils/cn";
+import { ThemeToggle } from "./ThemeToggle";
 
 export const SiteContainer = ({
     children,
@@ -52,7 +52,11 @@ export const SiteHeader = ({
 }) => (
     <header className={cn("sticky top-0 z-30 border-b bg-background/80 backdrop-blur", className)}>
         <SiteContainer className={cn("flex h-16 items-center justify-between", containerClassName)}>
+            <div>Logo</div>
+            <div className="flex-1">
             {children}
+            </div>
+            <ThemeToggle />
         </SiteContainer>
     </header>
 );
