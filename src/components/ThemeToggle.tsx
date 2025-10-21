@@ -1,23 +1,19 @@
 "use client";
 
-import { useTheme } from "@lib/next-themes";
-import { useEffect, useState } from "react";
-import { Moon, Sun } from "@lib/lucide-react"; // Import icons
-import { Button } from "@lib/radix-ui-themes";
-import { cn, PropifyPrimitive } from "@utils"; 
+import { DynamicIcon } from "@lib/lucide-react"; // Import icons
+import { Button } from "@lib/radix";
+
+import { useMounted } from "@hooks/useMounted";
+import { cn } from "@utils/cn";
+import { PropifyPrimitive } from "@utils/cva";
+import { useTheme } from "next-themes";
 
 export type ThemeToggleProps = PropifyPrimitive<"button">;
 
 export function ThemeToggle({ className, ...props }: ThemeToggleProps) {
     const { setTheme, resolvedTheme } = useTheme();
-    const [mounted, setMounted] = useState(false);
+    const mounted = useMounted();
 
-    // Fix hydration issue
-    useEffect(() => {
-        setMounted(true);
-    }, []);
-
-    // onClick handler to toggle theme
     const toggleTheme = () => {
         setTheme(resolvedTheme === "dark" ? "light" : "dark");
     };
@@ -35,7 +31,7 @@ export function ThemeToggle({ className, ...props }: ThemeToggleProps) {
                 aria-label="Toggle theme (loading)"
                 color="yellow"
             >
-                <Sun size={18} /> {/* Or Moon, just for layout */}
+                <DynamicIcon name="sun" size={18} />
             </Button>
         );
     }
@@ -47,16 +43,12 @@ export function ThemeToggle({ className, ...props }: ThemeToggleProps) {
             variant="outline"
             size="2" // Radix theme scale for a typical icon button
             {...props} // Spread remaining props
-                color="yellow"
+            color="yellow"
             className={cn("fixed bottom-4 right-4", className)} // Merge classes
             onClick={toggleTheme}
             aria-label={isDarkMode ? "Switch to light mode" : "Switch to dark mode"}
         >
-            {isDarkMode ? (
-                <Sun size={18} />
-            ) : (
-                <Moon size={18} />
-            )}
+            <DynamicIcon name={isDarkMode ? 'sun' : "moon"} size={18} />
         </Button>
     );
 }

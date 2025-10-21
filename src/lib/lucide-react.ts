@@ -1,2 +1,1 @@
-
-export * from 'lucide-react';
+export { DynamicIcon } from 'lucide-react/dynamic';

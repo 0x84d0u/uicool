@@ -11,6 +11,26 @@
       "import": "./dist/index.mjs",
       "require": "./dist/index.js"
     },
+    "./hooks": {
+      "types": "./dist/_EXPORT/hooks.d.ts",
+      "import": "./dist/_EXPORT/hooks.mjs",
+      "require": "./dist/_EXPORT/hooks.js"
+    },
+    "./site": {
+      "types": "./dist/_EXPORT/site.d.ts",
+      "import": "./dist/_EXPORT/site.mjs",
+      "require": "./dist/_EXPORT/site.js"
+    },
+    "./theme": {
+      "types": "./dist/_EXPORT/theme.d.ts",
+      "import": "./dist/_EXPORT/theme.mjs",
+      "require": "./dist/_EXPORT/theme.js"
+    },
+    "./utils": {
+      "types": "./dist/_EXPORT/utils.d.ts",
+      "import": "./dist/_EXPORT/utils.mjs",
+      "require": "./dist/_EXPORT/utils.js"
+    },
     "./package.json": "./package.json"
   },
   "files": [

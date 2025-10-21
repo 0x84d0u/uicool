@@ -23,10 +23,12 @@
     /* === Path Aliases === */
     "baseUrl": ".",
     "paths": {
+      "@hooks/*": ["src/hooks/*"],
       "@lib/*": ["src/lib/*"],
+      "@providers/*": ["src/providers/*"],
       "@styles/*": ["src/styles/*"],
-      "@theme": ["src/theme/index.ts"],
-      "@utils": ["src/utils/index.ts"],
+      "@utils/*": ["src/utils/*"],
+      "@components/*": ["src/components/*"],
     },
 
     /* === Next.js Optimization === */
