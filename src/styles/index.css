@@ -3,7 +3,20 @@
 
 @custom-variant dark (&:is(.dark *));
 
-:root {
+@theme {
+  --color-background: var(--color-white);
+  --color-foreground: var(--color-neutral-900);
+  --color-muted: var(--color-neutral-100);
+  --color-border: var(--color-neutral-200);
+
+
+  --breakpoint-*: initial;
+  --breakpoint-tablet: 40rem;
+  --breakpoint-laptop: 64rem;
+  --breakpoint-desktop: 80rem;
+}
+
+/* :root {
   --background: oklch(1 0 0);
   --foreground: oklch(0.145 0 0);
   --card: oklch(1 0 0);
@@ -118,7 +131,6 @@
     @apply border-border outline-ring/50;
   }
   body {
-    /* @apply bg-background text-foreground; */
-    @apply bg-red-300 dark:bg-yellow-300;
+    @apply bg-background text-foreground;
   }
-}
+} */

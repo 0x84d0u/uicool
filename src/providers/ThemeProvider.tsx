@@ -1,6 +1,6 @@
 "use client";
 
-import "@styles/index.css";
+// import "@styles/index.css";
 import { NextThemesProvider, NextThemesProviderProps } from "@lib/next-themes";
 import { RadixTheme, RadixThemeProps } from "@lib/radix";
 import { useMounted } from "@hooks/useMounted";
